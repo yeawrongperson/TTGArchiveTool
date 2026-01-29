@@ -1,4 +1,4 @@
-# 🦢 TTG Forum Archiver
+# TTG Forum Archiver
 
 **Archive your TheTechGame forum history before January 31, 2026**
 
@@ -12,7 +12,7 @@ TheTechGame is shutting down on **January 31, 2026**. This tool helps you preser
 
 ---
 
-## 🎯 What Does This Do?
+## What Does This Do?
 
 Automatically archives your TTG content:
 
@@ -25,7 +25,7 @@ Automatically archives your TTG content:
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Python
 
@@ -61,7 +61,7 @@ python ttg_archive_gui_tabbed.py
 
 ---
 
-## 📖 How to Use
+## How to Use
 
 ### Tab 1: Archive Your Profile
 
@@ -73,7 +73,7 @@ python ttg_archive_gui_tabbed.py
 3. Click "Start Archiving"
 4. Wait ~10 seconds for browser to load
 5. Click "Ready to Continue"
-6. ☕ Let it run!
+6. Let it run!
 
 **Time required:**
 - ~100 items: 10-20 minutes
@@ -97,22 +97,22 @@ Perfect for:
 
 ---
 
-## 💡 Features
+##  Features
 
-### ✨ Smart & Reliable
+###  Smart & Reliable
 
 - **Sequential pagination** - Never skips pages
 - **Image loading** - Waits for images before screenshotting
 - **Resume anytime** - Stop and restart without losing progress
 - **Cloudflare handling** - Automatically detects and helps with challenges
 
-### 🎛️ Flexible Options
+###  Flexible Options
 
 - **Posts-only mode** - Save space (archives just your posts, not full topics)
 - **Granular control** - Choose exactly what to archive
 - **Custom URLs** - Archive content from anyone, not just yourself
 
-### 🛡️ Safe & Tested
+###  Safe & Tested
 
 - Progress saved continuously
 - Browser profile persistence
@@ -121,7 +121,7 @@ Perfect for:
 
 ---
 
-## 📁 Output Structure
+##  Output Structure
 
 Everything saves to `archive_out/` folder:
 
@@ -141,7 +141,7 @@ archive_out/
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Images Not Loading
 
@@ -177,7 +177,7 @@ self.root.geometry("900x800")  # Change these numbers
 
 ---
 
-## 🎓 Technical Details
+##  Technical Details
 
 **Built with:**
 - Python 3.7+
@@ -195,7 +195,7 @@ self.root.geometry("900x800")  # Change these numbers
 
 ---
 
-## ⚙️ Advanced Options
+##  Advanced Options
 
 ### Command Line Version
 
@@ -219,9 +219,9 @@ See `CHROME_PROFILE_GUIDE.md` for details.
 
 ---
 
-## 📋 Files Included
+##  Files Included
 
-- `ttg_archive_gui_tabbed.py` - Main GUI application ⭐
+- `ttg_archive_gui_tabbed.py` - Main GUI application 
 - `ttg_archive_universal.py` - Command-line version
 - `README_GUI_UPDATED.md` - Comprehensive documentation
 - `TROUBLESHOOTING.md` - Common issues & solutions
@@ -229,23 +229,23 @@ See `CHROME_PROFILE_GUIDE.md` for details.
 
 ---
 
-## ⚡ Quick Tips
+## Quick Tips
 
-✅ **DO:**
+ **DO:**
 - Archive during off-peak hours
 - Test with a small archive first
 - Keep the browser window open
 - Use the Stop button (not browser close)
 - Archive NOW - don't wait!
 
-❌ **DON'T:**
+ **DON'T:**
 - Close the browser window manually
 - Run multiple instances simultaneously
 - Wait until January 30th!
 
 ---
 
-## 🆘 Need Help?
+##🆘 Need Help?
 
 1. **Check the logs:** `archive_out/meta/runlog.txt`
 2. **Read full docs:** `README_GUI_UPDATED.md`
@@ -253,7 +253,7 @@ See `CHROME_PROFILE_GUIDE.md` for details.
 
 ---
 
-## 💬 A Personal Note
+##  A Personal Note
 
 Hey everyone,
 
@@ -275,7 +275,7 @@ To everyone who's been part of this community: thank you. For the help, the laug
 
 ---
 
-## 📜 License
+## License
 
 Open Source - Feel free to use, modify, and share!
 
@@ -283,20 +283,10 @@ No warranty provided. Use at your own risk. The tool is provided as-is to help p
 
 ---
 
-## 🙏 Credits
 
 **Made by Cygnet**
 
-Special thanks to:
-- Claude (Anthropic) for development assistance
-- The TTG community for years of memories
-- Everyone working to preserve their forum history
-
 ---
 
-**⏰ Remember: January 31, 2026 - Archive NOW!**
+*⏰ Remember: January 31, 2026 - Archive NOW!**
 
----
-
-*Last Updated: January 29, 2026*  
-*Version: 1.0*
