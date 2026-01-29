@@ -370,11 +370,17 @@ archive_out/meta/crash_log.txt
 ### Common Log Messages
 
 ✅ **"Images loaded"** - Good! Page is ready
+
 ✅ **"Detected X total pages"** - Pagination working
+
 ✅ **"Archived: X URLs"** - Success count
+
 ⚠️ **"Image wait timed out"** - Some images didn't load (OK)
+
 ⚠️ **"Cloudflare challenge detected"** - Waiting for resolution
+
 ❌ **"Failed to load"** - Page couldn't be accessed
+
 
 ## Final Checklist Before January 31st
 
