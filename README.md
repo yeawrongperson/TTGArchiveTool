@@ -245,7 +245,7 @@ See `CHROME_PROFILE_GUIDE.md` for details.
 
 ---
 
-##🆘 Need Help?
+## Need Help?
 
 1. **Check the logs:** `archive_out/meta/runlog.txt`
 2. **Read full docs:** `README_GUI_UPDATED.md`
