@@ -155,7 +155,7 @@ archive_out/  (or archive_custom/)
 
 ## Features Explained
 
-### ✨ Smart Image Loading
+###  Smart Image Loading
 
 The script waits for images to load before taking screenshots:
 - Initial page load: ~3 seconds
@@ -164,7 +164,7 @@ The script waits for images to load before taking screenshots:
 
 You'll see "Images loaded" in the log when ready.
 
-### ✨ Sequential Pagination
+###  Sequential Pagination
 
 For topics with multiple pages, the script:
 - Detects total page count automatically
@@ -172,7 +172,7 @@ For topics with multiple pages, the script:
 - Never skips pages or jumps to "Last Page"
 - Logs: "Detected X total pages"
 
-### ✨ Posts-Only Mode
+###  Posts-Only Mode
 
 When enabled:
 - Archives your individual posts/replies
@@ -184,7 +184,7 @@ Without it:
 - Archives both your posts AND the topics they're in
 - More complete but uses more space
 
-### ✨ Pause for Login
+###  Pause for Login
 
 Why it's recommended:
 - Lets you login once at the start
@@ -196,7 +196,7 @@ You can uncheck it if:
 - Archiving public URLs only
 - Want it to run unattended
 
-### ✨ Resume Anytime
+###  Resume Anytime
 
 Progress is saved automatically:
 - `done_urls.json` tracks everything archived
@@ -272,33 +272,33 @@ If browser crashes:
 
 ## Tips for Best Results
 
-### 1. 🌙 Archive During Off-Peak Hours
+### 1. Archive During Off-Peak Hours
 - Late night or early morning
 - Fewer users = faster loading
 - Less Cloudflare challenges
 
-### 2. 📊 Start with a Test
+### 2. Start with a Test
 - Archive just your profile first
 - Check screenshot quality
 - Verify everything looks good
 - Then do the full archive
 
-### 3. ⏸️ Use Stop Button, Not Browser Close
+### 3. Use Stop Button, Not Browser Close
 - Saves progress properly
 - Cleaner shutdown
 - Easier to resume
 
-### 4. 💾 Check Your Disk Space
+### 4. Check Your Disk Space
 - Screenshots can be large (1-5MB each)
 - 1000 pages = ~2-3GB
 - Make sure you have enough space
 
-### 5. 📁 Organize Your Archives
+### 5. Organize Your Archives
 - Use different output folders for different archives
 - Example: `archive_personal`, `archive_important_topics`
 - Keeps things organized
 
-### 6. 🔄 Archive Multiple Times
+### 6. Archive Multiple Times
 - Run once now to get most content
 - Run again closer to Jan 31st for recent posts
 - Script skips duplicates automatically
@@ -394,7 +394,6 @@ archive_out/meta/crash_log.txt
 Created to help the TTG community preserve their forum history.
 
 Special thanks to:
-- Claude (Anthropic) for development assistance
 - The TTG community for years of memories
 - Everyone working to preserve forum content before the shutdown
 
@@ -408,4 +407,4 @@ Don't wait until the last day! Archive your memories now while the site is still
 
 *This tool is provided as-is to help preserve forum content. Archive responsibly and respect the work of content creators.*
 
-**Made by Cygnet** 🦢
+**Made by Cygnet**
