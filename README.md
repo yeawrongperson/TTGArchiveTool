@@ -271,7 +271,7 @@ To everyone who's been part of this community: thank you. For the help, the laug
 
 *Thank you for the memories.*
 
-— Cygnet 🦢
+— Cygnet
 
 ---
 
@@ -288,5 +288,5 @@ No warranty provided. Use at your own risk. The tool is provided as-is to help p
 
 ---
 
-*⏰ Remember: January 31, 2026 - Archive NOW!**
+* Remember: January 31, 2026 - Archive NOW!**
 
