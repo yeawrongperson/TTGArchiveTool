@@ -267,7 +267,7 @@ Please share this with anyone who might want to archive their content. We're run
 
 To everyone who's been part of this community: thank you. For the help, the laughs, the debates, the shared knowledge. 
 
-**TheTechGame: 2006 - 2026**
+**TheTechGame: 2009 - 2026**
 
 *Thank you for the memories.*
 
