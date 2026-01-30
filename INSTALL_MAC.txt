@@ -1,0 +1,494 @@
+================================================================================
+                  TTG FORUM ARCHIVER - macOS INSTALLATION GUIDE
+                              Made by Cygnet
+================================================================================
+
+*** WORKS ON macOS! Tested on macOS 15.5 (Sequoia) ***
+
+Follow these steps and you'll be archiving in 5 minutes.
+
+================================================================================
+REQUIREMENTS
+================================================================================
+
+  • macOS 10.13 or newer (High Sierra or later)
+  • 20 minutes to 3 hours (depending on content)
+  • 2-5GB free disk space
+  • Internet connection
+
+================================================================================
+INSTALLATION STEPS
+================================================================================
+
+STEP 1: INSTALL PYTHON
+-----------------------
+
+Check if you already have Python:
+
+Open Terminal (Applications → Utilities → Terminal) and type:
+
+    python3 --version
+
+If you see "Python 3.9.6" or higher, skip to Step 2.
+
+
+If you need to install Python:
+
+1. Go to https://www.python.org/downloads/
+2. Download the latest Python 3 for macOS
+3. Open the downloaded .pkg file
+4. Follow the installer (click Continue/Install)
+5. The installer handles PATH setup automatically
+
+Verify installation:
+
+    python3 --version
+
+You should see: Python 3.x.x
+
+
+STEP 2: INSTALL DEPENDENCIES
+-----------------------------
+
+Open Terminal and run these commands ONE AT A TIME:
+
+    pip3 install playwright beautifulsoup4
+
+Wait for it to finish, then run:
+
+    python3 -m playwright install chromium
+
+This downloads the browser (takes 1-2 minutes, ~200MB download).
+
+
+TROUBLESHOOTING:
+
+If you get "command not found: pip3", try:
+
+    python3 -m pip install playwright beautifulsoup4
+
+
+STEP 3: DOWNLOAD THE ARCHIVER
+------------------------------
+
+You probably already have it if you're reading this!
+
+If you downloaded a ZIP file:
+1. Go to Downloads folder
+2. Double-click the ZIP to extract it
+3. You'll get a folder with all the files
+
+
+STEP 4: RUN THE ARCHIVER
+-------------------------
+
+In Terminal, navigate to where you extracted the files:
+
+    cd ~/Downloads/ttg-archiver
+
+(Adjust the path if you put it somewhere else)
+
+Then run:
+
+    python3 ttg_archive_gui_tabbed.py
+
+*** The GUI window will open! ***
+
+================================================================================
+HOW TO USE THE TOOL
+================================================================================
+
+The GUI works the same on Mac as on Windows:
+
+TAB 1: ARCHIVE YOUR PROFILE
+----------------------------
+
+1. Enter your TTG username
+2. Select what to archive:
+   [ ] Profile Pages
+   [ ] Live Topics / Archived Topics
+   [ ] Live Posts / Archived Posts
+3. Click "Start Archiving"
+4. Wait for browser to open (~10 seconds)
+5. Click "Ready to Continue"
+6. Let it run!
+
+TIME REQUIRED:
+  • ~100 items: 10-20 minutes
+  • ~500 items: 45-90 minutes
+  • ~1000+ items: 1-3 hours
+
+
+TAB 2: ARCHIVE SPECIFIC URLS
+-----------------------------
+
+Perfect for:
+  • Saving farewell posts from friends
+  • Important community announcements
+  • Memorable threads
+
+HOW:
+1. Paste URLs (one per line)
+2. Choose mode:
+   - Single Page = First page only (fast)
+   - All Pages = Complete thread (slower but complete)
+3. Click "Start Archiving"
+
+================================================================================
+WHERE FILES ARE SAVED
+================================================================================
+
+By default, files save to:
+
+    /Users/YourName/archive_out/
+
+Or wherever you chose in the "Output Folder" field.
+
+TO FIND THEM:
+1. Open Finder
+2. Press Cmd+Shift+G (Go to Folder)
+3. Type the path shown in the GUI
+4. Press Enter
+
+================================================================================
+macOS-SPECIFIC NOTES
+================================================================================
+
+CHROMIUM PERMISSION DIALOG
+---------------------------
+
+First time you run, macOS might ask:
+"Do you want the application 'chromium' to accept incoming network 
+connections?"
+
+Click ALLOW. This is normal for Playwright.
+
+
+GATEKEEPER WARNING
+------------------
+
+If you get "cannot be opened because the developer cannot be verified":
+
+OPTION 1:
+1. Go to System Preferences → Security & Privacy
+2. Click "Open Anyway" at the bottom
+
+OPTION 2:
+Run this command:
+
+    xattr -d com.apple.quarantine ttg_archive_gui_tabbed.py
+
+
+TERMINAL PERMISSIONS
+--------------------
+
+macOS might ask Terminal to access folders. Click OK to allow.
+
+
+KEYBOARD SHORTCUTS
+------------------
+
+  • Cmd+Q to quit (not Ctrl+Q)
+  • Cmd+W to close window
+  • Use Cmd instead of Ctrl in browser
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "No module named 'tkinter'"
+------------------------------------
+
+SOLUTION 1 - If installed from python.org:
+Reinstall Python from python.org (includes tkinter by default)
+
+SOLUTION 2 - If installed via Homebrew:
+
+    brew install python-tk@3.11
+
+(Replace 3.11 with your Python version)
+
+
+PROBLEM: "command not found: python3"
+--------------------------------------
+
+SOLUTION: Use the full path:
+
+    /usr/local/bin/python3 ttg_archive_gui_tabbed.py
+
+Or:
+
+    /Library/Frameworks/Python.framework/Versions/3.11/bin/python3 ttg_archive_gui_tabbed.py
+
+
+PROBLEM: "Permission denied"
+-----------------------------
+
+SOLUTION: Make the script executable:
+
+    chmod +x ttg_archive_gui_tabbed.py
+
+
+PROBLEM: Browser doesn't open
+------------------------------
+
+SOLUTION: Reinstall chromium:
+
+    python3 -m playwright install chromium --force
+
+
+PROBLEM: GUI looks blurry on Retina display
+--------------------------------------------
+
+This is a Tkinter/Python limitation. The screenshots will still be 
+high quality!
+
+To improve GUI appearance:
+
+    defaults write -g AppleFontSmoothing -int 0
+
+(Then restart the app)
+
+================================================================================
+MAC TIPS
+================================================================================
+
+RUN FROM ANYWHERE
+-----------------
+
+Create an alias in your ~/.zshrc or ~/.bash_profile:
+
+    alias ttg-archive="cd ~/Downloads/ttg-archiver && python3 ttg_archive_gui_tabbed.py"
+
+Then just type "ttg-archive" in Terminal!
+
+
+DESKTOP SHORTCUT
+----------------
+
+1. Open Automator (Applications → Automator)
+2. New Document → Application
+3. Add "Run Shell Script" action
+4. Paste:
+   cd ~/Downloads/ttg-archiver
+   /usr/local/bin/python3 ttg_archive_gui_tabbed.py
+5. Save to Desktop as "TTG Archiver"
+6. Double-click to run!
+
+
+FASTER TERMINAL NAVIGATION
+---------------------------
+
+Drag the folder from Finder into Terminal to auto-type the path:
+
+    cd [drag folder here]
+    python3 ttg_archive_gui_tabbed.py
+
+================================================================================
+PERFORMANCE TIPS
+================================================================================
+
+FOR APPLE SILICON (M1/M2/M3/M4):
+Everything works! Playwright runs natively on ARM.
+
+FOR INTEL MACS:
+No special configuration needed.
+
+TO REDUCE CPU USAGE:
+The script is intentionally slow (10-15 sec per page) to ensure quality.
+This is normal!
+
+================================================================================
+CHECKING LOGS
+================================================================================
+
+OPEN IN TERMINAL:
+
+    cat ~/archive_out/meta/runlog.txt
+
+OPEN IN FINDER:
+
+1. Go to your output folder
+2. Navigate to "meta/" folder
+3. Double-click "runlog.txt"
+
+================================================================================
+QUICK REFERENCE COMMANDS
+================================================================================
+
+Navigate to archiver folder:
+    cd ~/Downloads/ttg-archiver
+
+Run the archiver:
+    python3 ttg_archive_gui_tabbed.py
+
+Check Python version:
+    python3 --version
+
+Check if dependencies installed:
+    pip3 list | grep playwright
+
+Reinstall chromium browser:
+    python3 -m playwright install chromium --force
+
+View logs:
+    cat ~/archive_out/meta/runlog.txt
+
+Open output folder in Finder:
+    open ~/archive_out
+
+================================================================================
+ADVANCED: VIRTUAL ENVIRONMENT (OPTIONAL)
+================================================================================
+
+If you want to keep dependencies isolated:
+
+Create virtual environment:
+    python3 -m venv ttg-env
+
+Activate it:
+    source ttg-env/bin/activate
+
+Install dependencies:
+    pip install playwright beautifulsoup4
+    python -m playwright install chromium
+
+Run archiver:
+    python ttg_archive_gui_tabbed.py
+
+When done, deactivate:
+    deactivate
+
+================================================================================
+VERIFICATION CHECKLIST
+================================================================================
+
+Before archiving, make sure:
+
+  [ ] Python 3.7+ installed (python3 --version)
+  [ ] Playwright installed (pip3 list | grep playwright)
+  [ ] Chromium installed (python3 -m playwright install chromium)
+  [ ] GUI opens without errors
+  [ ] You have enough disk space
+  [ ] You're connected to the internet
+
+================================================================================
+WHAT TO EXPECT
+================================================================================
+
+TIME ESTIMATES:
+  • ~100 posts: 10-20 minutes ☕
+  • ~500 posts: 45-90 minutes 🍕
+  • ~1000+ posts: 1-3 hours 🎬
+
+FILE SIZES:
+  • Screenshots: ~1-5MB each
+  • HTML files: ~50-500KB each
+  • Total for 1000 pages: ~2-3GB
+
+RESOURCE USAGE:
+  • CPU: Light (script is intentionally slow)
+  • RAM: ~500MB
+  • Network: Continuous (downloading pages)
+
+================================================================================
+macOS vs WINDOWS DIFFERENCES
+================================================================================
+
+FEATURE         macOS               WINDOWS
+-------         -----               -------
+Command         python3             python
+Package mgr     pip3                pip
+Terminal        Terminal.app        Command Prompt
+Paths           /Users/you/         C:\Users\You\
+Shortcuts       Cmd+C/V             Ctrl+C/V
+Window style    Native Mac          Native Windows
+
+Everything else works identically!
+
+================================================================================
+BACKUP YOUR ARCHIVE
+================================================================================
+
+Once archiving is complete:
+
+OPTION 1 - EXTERNAL DRIVE:
+    cp -r ~/archive_out /Volumes/YourDrive/TTG_Backup
+
+OPTION 2 - iCloud:
+    cp -r ~/archive_out ~/Library/Mobile\ Documents/com~apple~CloudDocs/TTG_Backup
+
+OPTION 3 - ZIP IT:
+    cd ~
+    zip -r ttg_archive.zip archive_out
+
+================================================================================
+QUICK START (TL;DR)
+================================================================================
+
+Install dependencies:
+    pip3 install playwright beautifulsoup4
+    python3 -m playwright install chromium
+
+Download and extract the archiver:
+    cd ~/Downloads/ttg-archiver
+
+Run it:
+    python3 ttg_archive_gui_tabbed.py
+
+That's it! 🎉
+
+================================================================================
+STILL HAVING ISSUES?
+================================================================================
+
+CHECK THESE:
+
+1. Python version too old?
+   Minimum: Python 3.7
+   Recommended: Python 3.9+
+
+2. macOS too old?
+   Minimum: macOS 10.13 (High Sierra)
+   Recommended: macOS 11+
+
+3. Permissions issues?
+   Grant Terminal full disk access in System Preferences
+
+4. Network issues?
+   Disable VPN temporarily
+   Check firewall settings
+
+STILL STUCK?
+
+1. Check the logs: ~/archive_out/meta/runlog.txt
+2. Report on GitHub: https://github.com/yourusername/ttg-archiver/issues
+3. Include:
+   - macOS version
+   - Python version
+   - Error message
+   - What you tried
+
+================================================================================
+NEED HELP?
+================================================================================
+
+  • Documentation: README_GUI_UPDATED.md (view on GitHub for formatting)
+  • Issues: https://github.com/yourusername/ttg-archiver/issues
+  • Logs: ~/archive_out/meta/runlog.txt
+
+================================================================================
+
+                              Made by Cygnet 🦢
+
+            Thank you for preserving your TTG memories!
+
+                      TheTechGame: 2009 - 2026
+
+================================================================================
+
+Last updated: January 29, 2026
+Tested on: macOS 15.5 (Sequoia) - MacBook Pro 16"
+Version: 1.0
+
+================================================================================
