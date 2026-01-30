@@ -1,4 +1,4 @@
-# 🍎 TTG Forum Archiver - macOS Installation Guide
+# TTG Forum Archiver - macOS Installation Guide
 
 **Made by Cygnet**
 
@@ -12,7 +12,7 @@ This tool works on macOS! The installation is slightly different from Windows, b
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 - **macOS 10.13 or newer** (High Sierra or later)
 - **20 minutes to 3 hours** (depending on how much content you have)
@@ -21,7 +21,7 @@ This tool works on macOS! The installation is slightly different from Windows, b
 
 ---
 
-## 🚀 Installation Steps
+## Installation Steps
 
 ### Step 1: Install Python
 
@@ -113,11 +113,11 @@ Then run:
 python3 ttg_archive_gui_tabbed.py
 ```
 
-**The GUI window will open!** 🎉
+**The GUI window will open!**
 
 ---
 
-## 🎮 Using the Tool
+## Using the Tool
 
 The GUI works the same on Mac as on Windows:
 
@@ -128,7 +128,7 @@ The GUI works the same on Mac as on Windows:
 3. Click "Start Archiving"
 4. Wait for browser to open (~10 seconds)
 5. Click "Ready to Continue"
-6. ☕ Let it run!
+6. Let it run!
 
 ### Tab 2: Archive Specific URLs
 
@@ -138,7 +138,7 @@ The GUI works the same on Mac as on Windows:
 
 ---
 
-## 📁 Where Files Are Saved
+## Where Files Are Saved
 
 By default, files save to:
 
@@ -156,7 +156,7 @@ Or wherever you chose in the "Output Folder" field.
 
 ---
 
-## 🔧 macOS-Specific Notes
+## macOS-Specific Notes
 
 ### Chromium Permission Dialog
 
@@ -185,7 +185,7 @@ macOS might ask Terminal to access folders. Click **OK** to allow.
 
 ---
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### "No module named 'tkinter'"
 
@@ -244,7 +244,7 @@ defaults write -g AppleFontSmoothing -int 0
 
 ---
 
-## 💡 Mac Tips
+## Mac Tips
 
 ### Run from Anywhere
 
@@ -280,7 +280,7 @@ python3 ttg_archive_gui_tabbed.py
 
 ---
 
-## ⚡ Performance Tips
+## Performance Tips
 
 ### For Apple Silicon (M1/M2/M3):
 
@@ -312,7 +312,7 @@ cat ~/archive_out/meta/runlog.txt
 
 ---
 
-## 📱 Quick Reference Commands
+## Quick Reference Commands
 
 ```bash
 # Navigate to archiver folder
@@ -339,7 +339,7 @@ open ~/archive_out
 
 ---
 
-## 🎓 Advanced: Virtual Environment (Optional)
+## Advanced: Virtual Environment (Optional)
 
 If you want to keep dependencies isolated:
 
@@ -363,7 +363,7 @@ deactivate
 
 ---
 
-## ✅ Verification Checklist
+## Verification Checklist
 
 Before archiving, make sure:
 
@@ -376,7 +376,7 @@ Before archiving, make sure:
 
 ---
 
-## 🆘 Still Having Issues?
+## Still Having Issues?
 
 **Check these:**
 
@@ -407,13 +407,13 @@ Before archiving, make sure:
 
 ---
 
-## 📊 What to Expect
+## What to Expect
 
 **Time estimates:**
 
-- ~100 posts: 10-20 minutes ☕
-- ~500 posts: 45-90 minutes 🍕
-- ~1000+ posts: 1-3 hours 🎬
+- ~100 posts: 10-20 minutes
+- ~500 posts: 45-90 minutes
+- ~1000+ posts: 1-3 hours
 
 **File sizes:**
 
@@ -429,7 +429,7 @@ Before archiving, make sure:
 
 ---
 
-## 🍎 macOS vs Windows Differences
+## macOS vs Windows Differences
 
 | Feature | macOS | Windows |
 |---------|-------|---------|
@@ -444,7 +444,7 @@ Everything else works identically!
 
 ---
 
-## 💾 Backup Your Archive
+## Backup Your Archive
 
 Once archiving is complete:
 
@@ -466,7 +466,7 @@ zip -r ttg_archive.zip archive_out
 
 ---
 
-## 🎯 Quick Start (TL;DR)
+## Quick Start (TL;DR)
 
 ```bash
 # Install dependencies
@@ -480,25 +480,18 @@ cd ~/Downloads/ttg-archiver
 python3 ttg_archive_gui_tabbed.py
 ```
 
-That's it! 🎉
+That's it!
+
 
 ---
 
-## 📞 Need Help?
-
-- **Documentation:** README_GUI_UPDATED.md
-- **Issues:** https://github.com/yourusername/ttg-archiver/issues
-- **Logs:** `~/archive_out/meta/runlog.txt`
-
----
-
-**Made by Cygnet** 🦢
+**Made by Cygnet**
 
 *Thank you for preserving your TTG memories!*
 
-**TheTechGame: 2006 - 2026**
+**TheTechGame: 2009 - 2026**
 
 ---
 
 *Last updated: January 29, 2026*  
-*Tested on: macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma)*
+*Tested on: macOS 15.5 (Sequoia)*
